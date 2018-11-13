@@ -1,8 +1,3 @@
-<?php 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,52 +39,15 @@ if (session_status() == PHP_SESSION_NONE) {
         <?php include_once 'navbar.php'; ?>
 
         <div id="page-wrapper">
-        	<?php  
-        	if (isset($_SESSION['aksi_sukses'])) {
-        	?>
-        	<div class="row">
-        		<div class="col-md-12">
-        			<div class="alert alert-success" role="alert"><?php echo $_SESSION['aksi_sukses']; ?></div>
-        		</div>
-        	</div>
-        	<?php 
-        	unset($_SESSION['aksi_sukses']);
-        	}
-        	?>
-        	<?php  
-        	if (isset($_SESSION['aksi_gagal'])) {
-        	?>
-        	<div class="row">
-        		<div class="col-md-12">
-        			<div class="alert alert-success" role="alert"><?php echo $_SESSION['aksi_gagal']; ?></div>
-        		</div>
-        	</div>
-        	<?php
-        	unset($_SESSION['aksi_gagal']); 
-        	}
-        	?>
             <div class="row">
-                <div class="col-md-12">
-                    <h1 class="page-header">Input Kategori</h1>
+                <div class="col-lg-12">
+                    <h1 class="page-header">Title</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <div class="row">
-            	<div class="col-md-12">
-            		<form action="proses/proses_kategori.php?aksi=input" method="post">
-            			<div class="form-group">
-            				<label>Kategori</label>
-            				<input type="text" name="kategori" class="form-control">
-            			</div>
-            			<div class="form-group">
-            				<button type="submit" name="submit" class="btn btn-primary pull-right">Tambah</button>
-            			</div>
-            		</form>
-            	</div>
-            	
-            </div>
         </div>
         <!-- /#page-wrapper -->
+
     </div>
     <!-- /#wrapper -->
 
